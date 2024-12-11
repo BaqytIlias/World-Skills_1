@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator">
+    <div class="display">
+      <div class="memory-display">M1: 0</div>
+      <input type="text" id="result" value="0" disabled>
+      <div class="hint">Бухгалтерский</div>
+    </div>
+    <div class="buttons">
+      <!-- Верхний ряд -->
+      <button class="gray" onclick="memoryClear()">MC</button>
+      <button class="gray" onclick="memoryRecall()">MR</button>
+      <button class="gray" onclick="memoryMinus()">M-</button>
+      <button class="gray" onclick="memoryPlus()">M+</button>
+      <button class="gray" onclick="sqrt()">√</button>
+      <button class="gray">MU</button>
+
+      <!-- Второй ряд -->
+      <button class="gray" onclick="toggleSign()">+/-</button>
+      <button class="white" onclick="appendNumber(7)">7</button>
+      <button class="white" onclick="appendNumber(8)">8</button>
+      <button class="white" onclick="appendNumber(9)">9</button>
+      <button class="gray" onclick="setOperation('/')">÷</button>
+      <button class="gray" onclick="percent()">%</button>
+
+      <!-- Третий ряд -->
+      <button class="gray" onclick="backspace()">→</button>
+      <button class="white" onclick="appendNumber(4)">4</button>
+      <button class="white" onclick="appendNumber(5)">5</button>
+      <button class="white" onclick="appendNumber(6)">6</button>
+      <button class="gray" onclick="setOperation('*')">×</button>
+      <button class="gray" onclick="setOperation('-')">-</button>
+
+      <!-- Четвёртый ряд -->
+      <button class="red" onclick="clearAll()">AC</button>
+      <button class="white" onclick="appendNumber(1)">1</button>
+      <button class="white" onclick="appendNumber(2)">2</button>
+      <button class="white" onclick="appendNumber(3)">3</button>
+      <button class="gray" onclick="setOperation('+')">+</button>
+      <button class="blue" onclick="calculate()">=</button>
+
+      <!-- Пятый ряд -->
+      <button class="red" onclick="clearEntry()">C</button>
+      <button class="white" onclick="appendNumber(0)">0</button>
+      <button class="white" onclick="appendNumber('00')">00</button>
+      <button class="white" onclick="appendDot()">.</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
